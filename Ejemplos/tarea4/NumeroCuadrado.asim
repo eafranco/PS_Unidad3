@@ -1,0 +1,19 @@
+#Programa que obtiene el cuadrado de un numero
+RD N
+RD X
+ASP 1
+STA C
+LDA N
+JSUB N1
+STA R
+WD R
+END
+N1
+MUL N
+PUSH
+LDA C
+ADD C
+COMP X
+POP
+JLT N1
+RSUB

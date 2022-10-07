@@ -1,0 +1,34 @@
+#Lee 6 valores enteros por el teclado
+#suma solamente los numero pares, tanto negativos como positivos, imprime la suma
+ASP 7
+STA N
+ASP 1
+STA INC
+ASP 1
+STA CONT
+ASP 0
+STA SUMA
+ASP 2
+STA P
+J1
+LDA CONT
+COMP N
+JLT J2
+WD SUMA
+END
+J2
+LDA CONT
+ADD INC
+STA CONT
+RD NUM
+LDA NUM
+STA AUX
+LDA AUX
+MOD P
+JEQ J3
+J J1
+J3
+LDA SUMA
+ADD NUM
+STA SUMA
+J J1

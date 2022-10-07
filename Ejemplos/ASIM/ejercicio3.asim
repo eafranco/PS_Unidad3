@@ -1,0 +1,28 @@
+#Calcula el valor en la posicion N de la sucesion de Fibonacci
+#N se ingresa por teclado, imprime el valor de la posicion N
+ASP 0
+STA N1
+ASP 1
+STA N2
+RD NX
+ASP 2
+STA CONT
+ASP 1
+STA INC
+J1
+LDA CONT
+COMP NX
+JLT J2
+WD N2
+END
+J2
+LDA CONT
+ADD INC
+STA CONT
+LDA N2
+STA AUX
+ADD N1
+STA N2
+LDA AUX
+STA N1
+J J1

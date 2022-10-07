@@ -1,0 +1,50 @@
+#Leer 4 valores enteros por el teclado y obtener la suma de #los números pares
+
+RD A
+RD B
+RD C
+RD D
+
+ASP 2
+STA M
+
+LDA  A
+MOD M
+JEQ SUMA
+
+LDA  B
+MOD M
+JEQ SUMB
+
+LDA  C
+MOD M
+JEQ SUMC
+
+LDA  D
+MOD M
+JEQ SUMD
+
+SUMA
+LDA A
+ADD S
+STA S
+
+SUMB
+LDA B
+ADD S
+STA S
+
+SUMC
+LDA C
+ADD S
+STA S
+
+SUMD
+LDA D
+ADD S
+STA S
+
+
+WD S 
+
+END

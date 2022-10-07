@@ -1,0 +1,7 @@
+dos
+prueba1.txt
+uno
+  UID   PID  PPID        F CPU PRI NI       SZ    RSS WCHAN     S             ADDR TTY           TIME CMD
+    0  4295   446     4106   0  31  0  4304892   4764 -      Ss                  0 ttys000    0:00.04 login -pfl Enrique /bin/bash -c exec -la zsh /bin/zsh
+  501  4296  4295     4006   0  31  0  4297448   2292 -      S                   0 ttys000    0:00.31 -zsh
+    0  4512  4296     4106   0  31  0  4278944    940 -      R+                  0 ttys000    0:00.01 ps -la

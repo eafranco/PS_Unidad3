@@ -1,0 +1,50 @@
+#Dado un número, calcula el área y volúmen de un cuadrado o
+#un triángulo, según la elección del usuario.
+ASP 2
+STA d
+RS a
+RS v
+RS c
+RS t
+RD n
+ASP 0
+JSUB J1
+JSUB VOL
+WS a
+WD area
+WS v
+WD volu
+END
+J1
+COMP n
+JGT TRI
+JLT CUA
+END
+TRI
+WS t
+RD b
+RD l
+RD h
+JSUB AT
+RSUB
+CUA
+WS c
+RD h
+JSUB AC
+RSUB
+AT
+LDA b
+MUL l
+DIV d
+STA area
+RSUB
+AC
+LDA h
+MUL h
+STA area
+RSUB
+VOL
+LDA area
+MUL h
+STA volu
+RSUB

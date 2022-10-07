@@ -1,0 +1,33 @@
+#Pide un numero  N entre 5 y 10, ingresado por el teclado
+#imprime de forma ascendente 1,2 , ... , N - 1, N
+ASP 5
+STA LI
+ASP 10
+STA LS
+RD N
+LDA LI
+COMP N
+JLT J1
+END
+J1
+LDA LS
+ COMP N
+JGT J2
+END
+J2
+ASP 1
+STA DEC
+ASP 1
+STA CONT
+J3
+LDA CONT
+COMP N
+JLT J4
+WD N
+END
+J4
+LDA CONT
+ADD DEC
+WD CONT
+STA CONT
+J J3

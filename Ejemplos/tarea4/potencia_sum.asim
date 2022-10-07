@@ -1,0 +1,33 @@
+#Calcula la potencia X de un numero N mediante sumas sucesivas
+#N y X se reciben del teclado
+RD N
+RD X
+ASP 1
+STA CX
+LDA N
+STA NX
+POT
+ASP 1
+ADD CX
+STA CX
+ASP 1
+STA CN
+LDA NX
+STA NP
+SUMA
+ASP 1
+ADD CN
+STA CN
+LDA NX
+ADD NP
+STA NX
+LDA N
+COMP CN
+JGT SUMA
+LDA X
+COMP CX
+JGT POT
+WD NX
+END
+
+

@@ -1,0 +1,27 @@
+#Obtiene el promedio de N numeros ingresados por el teclado
+#imprime el promedio
+RD N
+ASP 0
+STA CONT
+ASP 1
+STA INC
+ASP 0
+STA SUMA
+J1
+LDA CONT
+COMP N
+JLT J2
+LDA SUMA
+DIV N
+STA PROM
+WD PROM
+END
+J2
+LDA CONT
+ADD INC
+STA CONT
+RD NUM
+LDA SUMA
+ADD NUM
+STA SUMA
+J J1

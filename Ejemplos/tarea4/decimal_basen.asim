@@ -1,0 +1,34 @@
+#Convierte un numero decimal N a su forma en base B
+#N y B se reciben del teclado
+RD N
+RD B
+ASP 0
+STA C
+STA RES
+STA BN
+STA E
+LDA N
+STA D
+L1
+JSUB CEXPN
+ASP 1
+ADD C
+STA C
+LDA D
+JGT L1
+WD BN
+END
+CEXPN
+LDA D
+MOD B
+STA RES
+LDA D
+DIV B
+STA D
+ASP 10
+EXP C
+MUL RES
+STA E
+ADD BN
+STA BN
+RSUB

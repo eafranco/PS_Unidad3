@@ -1,0 +1,14 @@
+#No se que hace este programa
+RD  A
+LDA A
+RD  A
+ADD A
+RD  A
+ADD A
+RD  A
+ADD A
+RD  A
+ADD A
+STA A
+WD  A
+END
