@@ -1,4 +1,4 @@
-//wait1.c: creación de procesos (hilos) con fork
+//wait1.c: creaciï¿½n de procesos (hilos) con fork
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -23,6 +23,7 @@ switch (pid)
      if( (childid=wait(0))==-1)
        printf("no pudo esperar al hijo");
     else
+    
        printf("mi hijo con pid %d ha muerto",childid ); 
 
 }
